@@ -45,9 +45,9 @@ class Ui_Login(object):
             banco.close()                
             if (self.lineEdit_2.text() == senha_bd[0][0]):
                 if(self.priv_bd == 'atendente'):
-                    self.pushButton.clicked.connect(self.openAtendente)
+                    self.openAtendente()
                 else:
-                    self.pushButton.clicked.connect(self.openWindow)
+                    self.openWindow()
             else:
                 self.msg = QMessageBox()
                 self.msg.setWindowTitle('Erro')

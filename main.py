@@ -758,7 +758,7 @@ class Ui_MainWindow(object):
         self.label_16.setText(_translate("MainWindow", ''))
         self.label_21.setText(_translate("MainWindow", "made by Lucas Alves"))
         self.label_22.setText(_translate("MainWindow", "github: @lucasfdelis"))
-        self.label_23.setText(_translate("MainWindow", "Versão 1.0.0"))
+        self.label_23.setText(_translate("MainWindow", "Versão 1.0.1"))
         self.menuConfigura_es.setTitle(_translate("MainWindow", "Configurações"))
         self.menuEditar_televendas.setTitle(_translate("MainWindow", "Editar pastas de televendas"))
         self.actionEditar_pasta_principal.setText(_translate("MainWindow", "Editar pasta principal"))

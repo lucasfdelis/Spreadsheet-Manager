@@ -14,7 +14,7 @@ import sqlite3
 
 class Ui_Cadastro(object):
     def cadastrar(self):
-        try:       
+        try:
             nome = self.lineEdit.text()
             login = self.lineEdit_3.text()
             senha = self.lineEdit_2.text()
@@ -25,15 +25,17 @@ class Ui_Cadastro(object):
                 priv = 'atendente'
             if (self.checkBox_3.isChecked()):
                 priv = 'admin'
-            if (senha == c_senha):    
+            if (senha == c_senha):
                 try:
-                    banco = sqlite3.connect('bdCadastro.db') 
+                    banco = sqlite3.connect('bdCadastro.db')
                     cursor = banco.cursor()
-                    cursor.execute("CREATE TABLE IF NOT EXISTS cadastro (nome text,login text,senha text,priv text)")
-                    cursor.execute("INSERT INTO cadastro VALUES ('"+nome+"','"+login+"','"+senha+"','"+priv+"')")
-                    banco.commit() 
+                    cursor.execute(
+                        "CREATE TABLE IF NOT EXISTS cadastro (nome text,login text,senha text,priv text)")
+                    cursor.execute(
+                        "INSERT INTO cadastro VALUES ('"+nome+"','"+login+"','"+senha+"','"+priv+"')")
+                    banco.commit()
                     banco.close()
-                    
+
                     self.msg = QMessageBox()
                     self.msg.setWindowTitle('Sistema de cadastro')
                     self.msg.setIcon(QMessageBox.Information)
@@ -44,78 +46,24 @@ class Ui_Cadastro(object):
                     self.msg = QMessageBox()
                     self.msg.setIcon(QMessageBox.Warning)
                     self.msg.setWindowTitle('Erro.')
-                    self.msg.setText("Erro ao inserir dados. Verifique erros abaixo:")
+                    self.msg.setText(
+                        "Erro ao inserir dados. Verifique erros abaixo:")
                     self.msg.setDetailedText(str(erro))
                     self.msg.exec_()
             else:
                 self.msg = QMessageBox()
                 self.msg.setWindowTitle('Erro.')
                 self.msg.setIcon(QMessageBox.Information)
-                self.msg.setText("As senhas digitadas possuem diferenças entre si.")
+                self.msg.setText(
+                    "As senhas digitadas possuem diferenças entre si.")
                 self.msg.exec_()
         except Exception as e:
             print(e)
+
     def setupUi(self, Cadastro):
         Cadastro.setObjectName("Cadastro")
         Cadastro.setFixedSize(551, 607)
-        Cadastro.setStyleSheet("*{\n"
-"font-family: century gothic;\n"
-"font-size: 15px\n"
-"}\n"
-"\n"
-"#label_2\n"
-"{\n"
-"font-size: 24px\n"
-"}\n"
-"\n"
-"QMainWindow{\n"
-"background:url(img/background.jpeg);\n"
-"}\n"
-"QFrame\n"
-"{\n"
-"background: rgba(0,0,0,0.8);\n"
-"border-radius: 5px\n"
-"}\n"
-"\n"
-"QPushButton\n"
-"{\n"
-"color: #333;\n"
-"background: white;\n"
-"border-radius: 10px\n"
-"}\n"
-"\n"
-"QPushButton:hover\n"
-"{\n"
-"color: 333;\n"
-"background: gray;\n"
-"border-radius: 10px\n"
-"}\n"
-"\n"
-"\n"
-"QToolButton\n"
-"{\n"
-"background: white;\n"
-"border-radius: 10px\n"
-"}\n"
-"\n"
-"QLabel\n"
-"{\n"
-"color: white;\n"
-"background: transparent;\n"
-"}\n"
-"\n"
-"QLineEdit\n"
-"{\n"
-"background: transparent;\n"
-"border: none;\n"
-"color: #717072;\n"
-"border-bottom: 1px solid #717072;\n"
-"}\n"
-"\n"
-"QRadioButton\n"
-"{\n"
-"color: white\n"
-"}")
+        Cadastro.setStyleSheet(open("css/cadastro.css").read())
         self.centralwidget = QtWidgets.QWidget(Cadastro)
         self.centralwidget.setObjectName("centralwidget")
         self.header = QtWidgets.QFrame(self.centralwidget)
@@ -130,7 +78,8 @@ class Ui_Cadastro(object):
         self.toolButton.setGeometry(QtCore.QRect(10, 10, 91, 91))
         self.toolButton.setText("")
         icon = QtGui.QIcon()
-        icon.addPixmap(QtGui.QPixmap("img/multi.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon.addPixmap(QtGui.QPixmap("img/multi.png"),
+                       QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.toolButton.setIcon(icon)
         self.toolButton.setIconSize(QtCore.QSize(100, 100))
         self.toolButton.setObjectName("toolButton")
@@ -202,7 +151,8 @@ class Ui_Cadastro(object):
         Cadastro.setWindowTitle(_translate("Cadastro", "Cadastro"))
         self.label_2.setText(_translate("Cadastro", "Cadastro de usuários"))
         self.pushButton.setText(_translate("Cadastro", "Criar novo usuário"))
-        self.lineEdit.setPlaceholderText(_translate("Cadastro", "Nome do Usuário"))
+        self.lineEdit.setPlaceholderText(
+            _translate("Cadastro", "Nome do Usuário"))
         self.lineEdit_2.setPlaceholderText(_translate("Cadastro", "Senha"))
         self.label_3.setText(_translate("Cadastro", "Nome do Usuário"))
         self.label_4.setText(_translate("Cadastro", "Senha"))
@@ -210,11 +160,13 @@ class Ui_Cadastro(object):
         self.label_6.setText(_translate("Cadastro", "Login"))
         self.label_5.setText(_translate("Cadastro", "Repita a senha"))
         self.lineEdit_4.setPlaceholderText(_translate("Cadastro", "Senha"))
-        self.label_7.setText(_translate("Cadastro", "Nível de privilégio do novo usuário:"))
+        self.label_7.setText(_translate(
+            "Cadastro", "Nível de privilégio do novo usuário:"))
         self.checkBox.setText(_translate("Cadastro", "Backoffice"))
         self.checkBox_2.setText(_translate("Cadastro", "Atendente"))
         self.checkBox_3.setText(_translate("Cadastro", "Administrador"))
-        
+
+
 if __name__ == "__main__":
     import sys
     app = QtWidgets.QApplication(sys.argv)

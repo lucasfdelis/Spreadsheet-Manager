@@ -1,0 +1,19 @@
+*{
+  font-family: century gothic;
+  font-size: 15px
+  }
+  
+  QMainWindow{
+  background:black;
+  }
+  
+  QLabel{
+  color: white;
+  font-size: 40px
+  }
+  
+  QToolButton
+  {
+  background: transparent;
+  border-radius: 5px
+  }

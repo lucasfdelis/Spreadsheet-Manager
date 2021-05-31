@@ -15,25 +15,7 @@ class Ui_atendentes(object):
     def setupUi(self, atendentes):
         atendentes.setObjectName("atendentes")
         atendentes.resize(800, 600)
-        atendentes.setStyleSheet("*{\n"
-"font-family: century gothic;\n"
-"font-size: 15px\n"
-"}\n"
-"\n"
-"QMainWindow{\n"
-"background:black;\n"
-"}\n"
-"\n"
-"QLabel{\n"
-"color: white;\n"
-"font-size: 40px\n"
-"}\n"
-"\n"
-"QToolButton\n"
-"{\n"
-"background: transparent;\n"
-"border-radius: 5px\n"
-"}")
+        atendentes.setStyleSheet(open("css/atendentes.css").read())
         self.centralwidget = QtWidgets.QWidget(atendentes)
         self.centralwidget.setObjectName("centralwidget")
         self.label = QtWidgets.QLabel(self.centralwidget)
@@ -43,7 +25,8 @@ class Ui_atendentes(object):
         self.toolButton.setGeometry(QtCore.QRect(380, 110, 281, 211))
         self.toolButton.setText("")
         icon = QtGui.QIcon()
-        icon.addPixmap(QtGui.QPixmap("img/warning.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon.addPixmap(QtGui.QPixmap("img/warning.png"),
+                       QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.toolButton.setIcon(icon)
         self.toolButton.setIconSize(QtCore.QSize(200, 200))
         self.toolButton.setObjectName("toolButton")
@@ -51,7 +34,8 @@ class Ui_atendentes(object):
         self.toolButton_2.setGeometry(QtCore.QRect(70, 80, 381, 311))
         self.toolButton_2.setText("")
         icon1 = QtGui.QIcon()
-        icon1.addPixmap(QtGui.QPixmap("img/multi.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon1.addPixmap(QtGui.QPixmap("img/multi.png"),
+                        QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.toolButton_2.setIcon(icon1)
         self.toolButton_2.setIconSize(QtCore.QSize(500, 500))
         self.toolButton_2.setObjectName("toolButton_2")
@@ -64,6 +48,7 @@ class Ui_atendentes(object):
         _translate = QtCore.QCoreApplication.translate
         atendentes.setWindowTitle(_translate("atendentes", "Em construção"))
         self.label.setText(_translate("atendentes", "ÁREA EM DESENVOLVIMENTO"))
+
 
 if __name__ == "__main__":
     import sys

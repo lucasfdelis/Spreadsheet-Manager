@@ -1,0 +1,58 @@
+*{
+  font-family: century gothic;
+  font-size: 15px
+  }
+  
+  #label_2
+  {
+  font-size: 24px
+  }
+  
+  QMainWindow{
+  background:url(img/background.jpeg);
+  }
+  QFrame
+  {
+  background: rgba(0,0,0,0.8);
+  border-radius: 5px
+  }
+  
+  QPushButton
+  {
+  color: #333;
+  background: white;
+  border-radius: 10px
+  }
+  
+  QPushButton:hover
+  {
+  color: 333;
+  background: gray;
+  border-radius: 10px
+  }
+  
+  
+  QToolButton
+  {
+  background: white;
+  border-radius: 10px
+  }
+  
+  QLabel
+  {
+  color: white;
+  background: transparent;
+  }
+  
+  QLineEdit
+  {
+  background: transparent;
+  border: none;
+  color: #717072;
+  border-bottom: 1px solid #717072;
+  }
+  
+  QRadioButton
+  {
+  color: white
+  }

@@ -1,0 +1,137 @@
+*{
+  font-family: century gothic;
+  font-size: 15px
+  }
+  
+  QMainWindow{
+  background:url(img/background.jpeg);
+  }
+  
+  QFrame
+  {
+  background: rgba(0,0,0,0.8);
+  border-radius: 5px
+  }
+  
+  #pushButton
+  {
+  background: red;
+  border-radius: 10px
+  }
+  
+  #pushButton_2
+  {
+  border-radius: 10px
+  }
+  
+  #pushButton_8
+  {
+  background: white;
+  border-radius: 5px
+  }
+  
+  #pushButton_3
+  {
+  border-radius: 10px
+  }
+  
+  #pushButton_4
+  {
+  border-radius: 10px
+  }
+  
+  #pushButton_5
+  {
+  border-radius: 10px
+  }
+  
+  #pushButton_6
+  {
+  border-radius: 10px
+  }
+  
+  #pushButton_7
+  {
+  border-radius: 10px
+  }
+  
+  #pushButton_8:hover
+  {
+  color: 333;
+  background: gray;
+  border-radius: 5px
+  }
+  
+  QLabel
+  {
+  background: transparent;
+  color: white;
+  }
+  
+  #label
+  {
+  font-size: 25px
+  }
+  
+  #toolButton_3
+  {
+  background: transparent;
+  border-radius: 5px
+  }
+  
+  #label_21
+  {
+  font-size: 10px
+  }
+  
+  #label_25
+  {
+  font-size: 10px
+  }
+  
+  #label_26
+  {
+  font-size: 10px
+  }
+  
+  #label_11
+  {
+  color: yellow;
+  font-size: 10px
+  }
+  
+  #label_12
+  {
+  color: yellow;
+  font-size: 10px
+  }
+  
+  #label_13
+  {
+  color: yellow;
+  font-size: 10px
+  }
+  
+  #label_14
+  {
+  color: yellow;
+  font-size: 10px
+  }
+  
+  #label_15
+  {
+  color: yellow;
+  font-size: 10px
+  }
+  
+  #label_16
+  {
+  color: yellow;
+  font-size: 10px
+  }
+  
+  #label_17
+  {
+  color: yellow;
+  font-size: 10px
+  }
